@@ -1,5 +1,24 @@
 import React, { Component } from 'react';
 import './App.css';
+import { Bookshelf } from './Bookshelf';
+
+const books = [
+  {
+    "id":"1",
+    "title":"Start with Why",
+    "author":"Simon Sinek"
+  },
+  {
+    "id":"2",
+    "title":"Ender's Game",
+    "author":"Orson Scott Card"
+  },
+  {
+    "id":"3",
+    "title":"The Nightingale",
+    "author":"Kristin Hannah"
+  }
+]
 
 class App extends Component {
   render() {
@@ -8,9 +27,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">My Bookshelf</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Bookshelf books={books} />
       </div>
     );
   }
